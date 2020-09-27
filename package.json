@@ -1,6 +1,10 @@
 {
   "name": "agbi",
   "version": "1.0.0",
+  "engines": {
+    "npm": "6.9.0",
+    "node": "10.16.0"
+  },
   "description": "AGBI hackathon ",
   "main": "server.js",
   "scripts": {
