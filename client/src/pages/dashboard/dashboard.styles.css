@@ -1,0 +1,128 @@
+.patient-dashboard-box {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.patient-dashboard-left {
+  flex: .95;
+  font-family: 'Playfair Display', serif;
+}
+
+.patient-dashboard-middle {
+  flex: 1.7;
+  /* background-color: red; */
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.patient-dashboard-middle::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.patient-dashboard-right {
+  flex: 1.3;
+  font-family: 'Playfair Display', serif;
+}
+
+/* For Left */
+.patient-dashboard-recent-list {
+  background-color: white;
+  width : 70%;
+  height: 280px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.patient-dashboard-recent-list {
+  padding: 15px 20px;
+}
+
+.patient-dashboard-searchfordoctor-box {
+  background-color: white;
+  width : 80%;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.patient-dashboard-searchfordoctor {
+  height: 40px;
+  background-color: #0091ea;
+  padding: 10px;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* For Middle */
+
+.patient-feed-box {
+  width: 95%;
+  min-height: 600px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-family: 'Playfair Display', serif;
+}
+
+.patient-feed-organisation {
+  padding: 20px 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+/* For Right */
+.patient-dashboard-news-list {
+  background-color: white;
+  height: 320px;
+  width : 64%;
+  margin: 20px 40px;
+  padding: 15px 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.patient-dashboard-news-list::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+.patient-dashboard-news {
+  color : blue;
+  margin-bottom: 15px;
+}
+
+.patient-dashboard-news-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #455a64;
+  margin-bottom: 4px;
+}
+.patient-dashboard-news-heading:hover {
+  color : #0091ea;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.patient-news-days-ago {
+  font-size: .75rem;
+  font-weight: 200;
+  color: #546e7a;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.patient-dashboard-toparticles-list {
+  background-color:white;
+  height: 300px;
+  width : 64%;
+  margin: 20px 40px;
+  padding: 10px 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}

@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  color: white;
+  background-color: #263238;
+  padding : 20px;
+  bottom: 0;
+  font: lighter;
+  letter-spacing: 1px;
+  font-size: 10px;
+  width: 100vw;
+}

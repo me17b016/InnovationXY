@@ -1,0 +1,104 @@
+.hospitalprofile-box {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.hospitalprofile-sidenavbar {
+  flex : 1;
+  background-color: #cfd8dc;
+}
+
+.hospitalprofile-sidenavbar-title {
+  height: 60px;
+  background-color: darkblue;
+  color: white;
+  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;  
+  margin-bottom: 30px;
+}
+
+.hospitalprofile-sidenavbar-link {
+  background-color: cornsilk;
+  height: 50px;
+  width: 90%;
+  margin-top: 10px;
+  margin-left: 5%;
+  border: 2px solid #78909c;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;  
+}
+
+.hospitalprofile-content-box {
+  flex : 5;
+  background-color: #fff8e1;
+}
+
+.hospitalprofile-overview-box {
+  width: 90%;
+  height: 96%;
+  margin-left: 5%;
+  margin-top: 2%;
+  background-color: white;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+.hospitalprofile-overview-title {
+  height: 60px;
+  background-color: darkblue;
+  color: white;
+  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;  
+  margin-bottom: 30px;
+}
+
+.hospitalprofile-overview-content {
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 90px);
+}
+
+.hospitalprofile-overview-content-left {
+  flex : 1;
+  height: 95%;
+}
+
+.hospitalprofile-overview-content-right {
+  flex : 2;
+  height: 95%;
+  border-left: 1px solid #b0bec5;
+  padding-left: 20px;
+}
+
+.hospitalprofile-details-box {
+  width: 90%;
+  height: 96%;
+  margin-left: 5%;
+  margin-top: 2%;
+  background-color: white;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+.hospitalprofile-details-title {
+  height: 60px;
+  background-color: darkblue;
+  color: white;
+  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;  
+  margin-bottom: 30px;
+}

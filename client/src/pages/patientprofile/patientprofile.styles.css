@@ -1,0 +1,37 @@
+.patient-profile-box {
+  background-color: beige;
+  height: 1000px;
+  margin: 0%;
+  padding: 10px;
+}
+
+.patient-profile-card {
+  background-color: blue;
+  width : 85%;
+  height: 900px;
+  margin: 20px auto;
+  padding: 20px 40px;
+  margin-bottom: 80px;
+  font-family: 'Playfair Display', serif;
+}
+
+.patient-profile-basic {
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-profile-basic-box1 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.patient-profile-phnumber, .patient-profile-email, .patient-profile-gender {
+  flex : 1;
+}
+.patient-profile-basic-box2 {
+  flex : 1;
+  display: flex;
+  flex-direction: row;
+}
