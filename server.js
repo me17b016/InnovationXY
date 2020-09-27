@@ -16,9 +16,9 @@ mongoose.connect(process.env.DBURL, {useNewUrlParser: true, useCreateIndex: true
     .catch((err) => console.log(err));
 
 // Testing Route
-app.get('/', (req, res) => {
-  res.send("<h1> AGBI hackathon 2020 </h1>")
-})
+// app.get('/', (req, res) => {
+//   res.send("<h1> AGBI hackathon 2020 </h1>")
+// })
 
 // Routes
 app.use('/api/auth', require('./routes/api/auth'));
