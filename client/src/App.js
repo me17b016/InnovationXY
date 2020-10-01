@@ -8,7 +8,9 @@ import LoginPage from './pages/loginpage/loginpage.component';
 import Dashboard from './pages/dashboard/dashboard.component';
 import PatientProfile from './pages/patientprofile/patientprofile.component';
 import HospitalProfile from './pages/hospitalprofile/hospitalprofile.component';
+import Diagnosis from './pages/diagnosis/diagnosis.component';
 
+import HospitalPosts from './pages/hospitalposts/hospitalposts.component';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => (
@@ -19,6 +21,8 @@ const App = () => (
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/profile" component={PatientProfile} />
         <Route path="/hospitalprofile" component={HospitalProfile} />
+        <Route path="/hospitaldiagnosis" component={Diagnosis} />
+        <Route exact path="/hospitalposts" component={HospitalPosts} />
       </Switch>
     </Router>
   );

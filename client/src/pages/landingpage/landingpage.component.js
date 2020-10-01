@@ -7,6 +7,7 @@ import TopNavBar from '../../components/topnavbar/topnavbar.component'
 import { Markup } from 'interweave'
 import BlogEditor from '../../components/blogeditor/blogeditor.component'
 import TwoWayBinding from '../../components/blog/blog.component'
+import Footer from '../../components/footer/footer.component'
 class LandingPage extends Component {
   
   constructor(props) {
@@ -29,7 +30,7 @@ class LandingPage extends Component {
         {/* <div dangerouslySetInnerHTML={{__html: this.state.str}} /> */}
         {/* <TwoWayBinding/> */}
         {/* < */}
-        <BlogEditor handleChange={this.handleChange}/>
+        <Footer />
       </div>
     );
   }

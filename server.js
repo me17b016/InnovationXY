@@ -1,4 +1,4 @@
-// require('dotenv/config')
+require('dotenv/config')
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -24,6 +24,7 @@ mongoose.connect(process.env.DBURL, {useNewUrlParser: true, useCreateIndex: true
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/hospitalprofile', require('./routes/api/hospitalprofile'));
 app.use('/api/patientdatainsert', require('./routes/api/patientdata'));
+app.use('/api/post', require('./routes/api/post'));
 
 if (process.env.NODE_ENV === 'production') {
   // Set static folder

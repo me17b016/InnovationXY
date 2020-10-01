@@ -5,7 +5,8 @@ import { useHistory } from 'react-router-dom'
 
 import TopNavBar from '../../components/topnavbar/topnavbar.component'
 import Footer from '../../components/footer/footer.component'
-
+import axios from 'axios';
+import Interweave from 'interweave'
 import ProfilePhoto from '../../assests/news1.jpg'
 const Dashboard = props => {
   let history = useHistory()
@@ -18,6 +19,7 @@ const Dashboard = props => {
   ])
 
   const [topArticles, setTopArticles] = useState([{}])
+  const [dummy, setDummy] = useState(0);
   const [feeds, setFeeds] = useState([
     {organisation : "Mehta's group of hospitals", place : "Agra, Delhi", content : ""},
     {organisation : "Reddy Clinic", place : "Gwalior", content : ""},
@@ -29,6 +31,29 @@ const Dashboard = props => {
     if (localStorage.getItem('isLoggedIn') != 1) {
 
       history.push('/login')
+    }
+    else {
+      axios.get('/api/post')
+      .then(response => {
+        const posts = response.data;
+        let temFeeds = [];
+        for (let i = 0; i < posts.length; i++) {
+          const post = posts[i];
+          let feed = {
+            profilephoto : post.profilephoto,
+            organisation : post.organisationname,
+            place : post.city,
+            title: post.title,
+            body : post.body,
+          }
+          temFeeds.push(feed);
+        }
+        setFeeds(temFeeds);
+        if (dummy) {
+          setDummy(1);
+        }
+        else {setDummy(0)}
+      })
     }
   }, [props])
 
@@ -52,14 +77,14 @@ const Dashboard = props => {
             feeds.map(feed => (
               <div className="patient-feed-box"> 
                 <div className="patient-feed-organisation">
-                  <div style={{marginRight: 20}}><img src={ProfilePhoto} height="50" width="50" style={{borderRadius:"50%"}}/></div>
+                  <div style={{marginRight: 20}}><img src={feed.profilephoto} height="50" width="50" style={{borderRadius:"50%"}}/></div>
                   <div>
                     <div>{feed.organisation} </div>
                     <div style={{fontSize : "0.7rem"}}>{feed.place} </div>
                   </div>
                 </div>
                 <div style={{marginTop: 0, marginBottom : 15, borderBottom: "1px solid #cfd8dc"}}></div>
-                <div className="patient-feed-content">{feed.content}</div>
+                <div className="patient-feed-content"><Interweave content={feed.body} /></div>
               </div>
             ))
           }
