@@ -12,14 +12,28 @@ const HospitalPosts = () => {
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
 
-  const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState([])
   const suggestions = [
-    { id: 'USA', text: 'USA' },
-    { id: 'Germany', text: 'Germany' },
-    { id: 'Austria', text: 'Austria' },
-    { id: 'Costa Rica', text: 'Costa Rica' },
-    { id: 'Sri Lanka', text: 'Sri Lanka' },
-    { id: 'Thailand', text: 'Thailand' }
+    { id: 'cancer', text: 'cancer' },
+    { id: 'blood cancer', text: 'blood cancer' },
+    { id: 'leukemia', text: 'leukemia' },
+    { id: 'lymphoma', text: 'lymphoma' },
+    { id: 'breast cancer', text: 'breast cancer' },
+    { id: 'invasive', text: 'invasive' },
+    { id: 'non-invasive', text: 'non-invasive' },
+    { id: 'skin cancer', text: 'skin cancer' },
+    { id: 'heart disease', text: 'heart disease' },
+    { id: 'pulmonary stenosis', text: 'pulmonary stenosis' },
+    { id: 'arrtythmia', text: 'arrtythmia' },
+    { id: 'tachycardia', text: 'tachycardia' },
+    { id: 'bradycardia', text: 'bradycardia' },
+    { id: 'eye', text: 'eye' },
+    { id: 'refractive errors', text: 'refractive errors' },
+    { id: 'myopia', text: 'myopia' },
+    { id: 'hypermeteropia', text: 'hypermeteropia' },
+    { id: 'cataract', text: 'cataract' },
+    { id: 'nuclear', text: 'nuclear' },
+    { id: 'cartical', text: 'cartical' }
   ]
 
   const handleDelete = i => {
