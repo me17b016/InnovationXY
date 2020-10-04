@@ -129,6 +129,7 @@ const PatientProfile = props => {
           </InputLabel>
           <BootstrapInput defaultValue={localStorage.getItem('login-name')} onChange={e => onChange(e)}
           />
+          <button className="user-profile-save-button">SAVE</button>
           <div style={{marginTop: 30, marginBottom : 30, borderBottom: "1px solid #cfd8dc"}}></div>
           <div className="patient-profile-basic">
             <div className="patient-profile-basic-box1">
@@ -207,25 +208,87 @@ const PatientProfile = props => {
                   Occupation
                 </InputLabel>
                 <TextField
-                  select
-                  SelectProps={{
-                    native: true,
-                  }}
                   variant="outlined"
                   style={{marginTop: 25, height: 5, width : 215}}
                   size="small"
-                >
-                  {genders.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </TextField>
+                />
               </div>
             </div>
             <div style={{marginTop: 30, marginBottom : 30, borderBottom: "1px solid #cfd8dc"}}></div>
           </div>
-          
+          <div>
+            <div className="patient-profile-basic-box1">
+              <div className="patient-profile-phnumber">
+                <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17}}>
+                  House No./ Street Name/ Area
+                </InputLabel>
+                <BootstrapInput defaultValue={localStorage.getItem('login-name')} onChange={e => onChange(e)}/>
+              </div>
+              <div className="patient-profile-email">
+                <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17}}>
+                  Colony / Street / Locality
+                </InputLabel>
+                <BootstrapInput defaultValue={localStorage.getItem('login-name')} onChange={e => onChange(e)}/>
+              </div>
+              <div className="patient-profile-gender">
+                <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17}}>
+                  City
+                </InputLabel>
+                <TextField
+                  variant="outlined"
+                  style={{marginTop: 25, width : 215}}
+                  size="small"
+                />
+              </div>
+            </div>
+            <div className="patient-profile-basic-box1">
+              <div className="patient-profile-phnumber">
+                <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17}}>
+                  State
+                </InputLabel>
+                <BootstrapInput defaultValue={localStorage.getItem('login-name')} onChange={e => onChange(e)}/>
+              </div>
+              <div className="patient-profile-email">
+                <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17}}>
+                  Country
+                </InputLabel>
+                <BootstrapInput defaultValue={localStorage.getItem('login-name')} onChange={e => onChange(e)}/>
+              </div>
+              <div className="patient-profile-gender">
+                <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17}}>
+                  Pincode
+                </InputLabel>
+                <TextField
+                  variant="outlined"
+                  style={{marginTop: 25, width : 215}}
+                  size="small"
+                />
+              </div>
+            </div>
+            <div style={{marginTop: 30, marginBottom : 30, borderBottom: "1px solid #cfd8dc"}}></div>
+          </div>
+          <div>
+            <div>
+              <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17}}>
+                Phone No.
+              </InputLabel>
+              <TextField
+                variant="outlined"
+                style={{marginTop: 25, width : 215}}
+                size="small"
+              />
+            </div>
+            <div style={{marginTop:20}}>
+              <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17}}>
+                Disease (Comma seperated value)
+              </InputLabel>
+              <TextField
+                variant="outlined"
+                style={{marginTop: 25, width : 415}}
+                size="small"
+              />
+            </div>
+          </div>
         </Paper>
       </div>
       <Footer />
