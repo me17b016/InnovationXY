@@ -184,7 +184,7 @@ const Diagnosis = props => {
                 </div>
                 <div style={{marginTop: 0, marginBottom : 0, borderBottom: "1px solid #cfd8dc"}}></div>
                 <div className="diagnosis-filters-sec-5">
-                    Gender
+                    Blood Type
                     <div style={{fontSize:12, fontWeight:"bold"}}>
                       <div style={{display:"flex", flexDirection:"row"}}>
                         <div style={{marginBottom:-10, flex:1}}><Checkbox onChange={e => bloodCategoryChange("ABP", e.target.checked)} checked={bloodCategory.ABP} color="primary" /> AB+</div>
