@@ -1,0 +1,34 @@
+.hospital-summary-box {
+  height: 220px;
+  width: 790px;
+  background-color: white;
+  margin: 20px 10px 20px 100px;
+  padding: 10px;
+}
+
+.hospital-summary-box:hover {
+  border: 1px solid #b0bec5;
+  transition: 0.5s;
+}
+
+.hospital-find-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.hospital-find-logo {
+  margin: 10px 5px 0px 10px;
+  flex : 1;
+}
+
+.hospital-find-name {
+  flex: 2;
+  color: #4fc3f7;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.hospital-find-details {
+  flex : 1;
+}

@@ -18,7 +18,7 @@ const HospitalUserSchema = new mongoose.Schema({
   anytimeopen : Boolean,
   timings : [{
     days : {type : String},
-    timing : {type : String}
+    time : {type : String}
   }],
   city : {
     type : String,

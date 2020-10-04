@@ -3,6 +3,18 @@ const router = express.Router()
 const HospitalOverview = require('../../models/HospitalOverview');
 const User = require('../../models/User');
 
+// Get all
+
+router.get('/', async(rew, res) => {
+  try {
+    let hospitals = await HospitalOverview.find();
+    res.status(200).json(hospitals);
+    //console.log(hospitals)
+  } catch (err) {
+    res.status(500).send('Server Error')
+  }
+})
+
 // Get
 router.get('/:id', async (req, res) =>{
   try {

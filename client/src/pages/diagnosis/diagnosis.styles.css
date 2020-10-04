@@ -63,9 +63,11 @@
 
 .diagnosis-filters-sec-1 {
   font-size: 15px;
-  height: 60px;
+  height: 20px;
   padding: 10px 10px 10px 10px;
   border-radius: 4px 4px 0px 0px;
+  display: flex;
+  flex-direction: row;
 }
 
 .diagnosis-filters-sec-2 {
@@ -95,5 +97,17 @@
 
 .diagnosis-charts-box {
   height: 100%;
-  flex: 4;
+  flex: 4.3;
+  overflow-y: auto;
+  /* margin-bottom: 500px; */
+}
+
+.diagnosis-table {
+  flex : 2;
+  background-color: #b0bec5;
+}
+
+.diagnosis-dynamic-charts {
+  flex : 1;
+  /* background-color: brown; */
 }

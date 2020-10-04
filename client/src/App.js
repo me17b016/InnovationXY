@@ -10,7 +10,11 @@ import PatientProfile from './pages/patientprofile/patientprofile.component';
 import HospitalProfile from './pages/hospitalprofile/hospitalprofile.component';
 import Diagnosis from './pages/diagnosis/diagnosis.component';
 
+import Hospitals from './pages/hospitals/hospitals.component';
+
 import HospitalPosts from './pages/hospitalposts/hospitalposts.component';
+import HospitalArticles from './pages/hospitalarticles/hospitalarticles.component';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => (
@@ -22,7 +26,9 @@ const App = () => (
         <Route exact path="/profile" component={PatientProfile} />
         <Route path="/hospitalprofile" component={HospitalProfile} />
         <Route path="/hospitaldiagnosis" component={Diagnosis} />
+        <Route path="/hospitals/:city" component={Hospitals} />
         <Route exact path="/hospitalposts" component={HospitalPosts} />
+        <Route exact path="/hospitalarticles" component={HospitalArticles} />
       </Switch>
     </Router>
   );
