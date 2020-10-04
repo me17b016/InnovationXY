@@ -84,6 +84,7 @@ const HospitalPosts = () => {
         title={title} body={body}
         tags={tags}
         suggestions={suggestions}
+        section={"Post"}
         handleDelete={handleDelete}
         handleAddition={handleAddition}
         handleDrag={handleDrag}

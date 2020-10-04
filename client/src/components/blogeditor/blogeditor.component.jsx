@@ -24,8 +24,8 @@ const BlogEditor = props => {
             <div className="BlogEditor">
                 <div style={{width:"80%", margin:"auto"}}>
                   <div className="blogeditor-text">
-                    <h1>POST SECTION</h1>
-                    <i><h3>Mehta Hospitals Hackathon AGBI (2020) </h3></i>
+                    <h1>{props.section} Section</h1>
+                    <i><h3>Mehta Group of Hospital, Hackathon AGBI (2020) </h3></i>
                   </div>
                   <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:0, marginLeft : 0, fontSize : 20, fontWeight:800}}>
                     Title
