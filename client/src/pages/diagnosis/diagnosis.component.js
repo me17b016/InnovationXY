@@ -45,7 +45,7 @@ const Diagnosis = props => {
     axios.get('/api/patientdatainsert')
     .then(res => {
       const data = res.data;
-      console.log(data)
+      // console.log(data)
       setPatientsData(data);
     })
   }, [props])

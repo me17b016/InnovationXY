@@ -46,11 +46,11 @@ const HospitalProfile = props => {
       if (data.speciality == "Multi Specialist") {
         setMulti(true);
       }
-      console.log(data)
+      // console.log(data)
       temData.id = localStorage.getItem('userid');
     }).then(() => {
       setData(temData)
-      console.log(temData)
+      // console.log(temData)
       if (dummy) {
         setDummy(0);
       }
@@ -147,7 +147,7 @@ const HospitalProfile = props => {
   }
 
   const saveOverview = () => {
-    console.log(data)
+    // console.log(data)
     axios.post('/api/hospitalprofile', data)
     .then(response => {
       console.log(response.data)

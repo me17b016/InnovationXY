@@ -32,7 +32,7 @@ const TopNavBar = (props) => {
 
   const logout = () => {
     localStorage.setItem('isLoggedIn', 0);
-    console.log('click')
+    // console.log('click')
     history.push('/login')
   }
 

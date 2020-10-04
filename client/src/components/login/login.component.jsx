@@ -59,7 +59,7 @@ const Login = (props) => {
   
   const onClick = async e => {
     e.preventDefault();
-    console.log(email, password)
+    // console.log(email, password)
     axios.post('/api/auth', {email, password})
     .then(response => {
       const data = response.data;
