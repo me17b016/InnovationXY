@@ -12,6 +12,8 @@ import TablePagination from '../../components/tablepagination/tablepagination.co
 import PieChartGender from '../../components/genderpiechart/genderpiechart.component';
 import PieChartBloodType from '../../components/bloodtypepiechart/bloodtypepiechart.component';
 
+import { Helmet } from 'react-helmet';
+
 import img11 from '../../assests/img1.1.jpeg';
 import img12 from '../../assests/img1.2.jpeg';
 import img13 from '../../assests/img1.3.jpeg';
@@ -112,6 +114,9 @@ const Diagnosis = props => {
 
   return (
     <div style={{height:"100%", overflow:"hidden"}}>
+      <Helmet>
+          <title>Discharge Summary</title>
+        </Helmet>
       <TopNavBar />
       <div className="diagnosis-outerbox">
         <div className="diagnosis-filter-box">

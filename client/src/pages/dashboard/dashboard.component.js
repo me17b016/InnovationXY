@@ -16,6 +16,8 @@ import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
 import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 
+import { Helmet } from 'react-helmet';
+
 const cities = [
   {
     value: 'All',
@@ -117,6 +119,9 @@ const Dashboard = props => {
 
   return (
     <Fragment>
+      <Helmet>
+          <title>Dashboard</title>
+        </Helmet>
       <TopNavBar/>
       <div className="patient-dashboard-box">
         <div className="patient-dashboard-left">

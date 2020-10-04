@@ -8,6 +8,7 @@ import TopNavBar from '../../components/topnavbar/topnavbar.component'
 import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
+import { Helmet } from 'react-helmet';
 
 import axios from 'axios';
 
@@ -155,6 +156,9 @@ const HospitalProfile = props => {
 
   return (
     <Fragment>
+      <Helmet>
+          <title>Hospital Profile</title>
+        </Helmet>
       <TopNavBar/>
       <div className="hospitalprofile-box">
         <div className="hospitalprofile-sidenavbar">

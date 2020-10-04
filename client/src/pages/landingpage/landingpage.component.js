@@ -9,6 +9,8 @@ import BlogEditor from '../../components/blogeditor/blogeditor.component'
 import TwoWayBinding from '../../components/blog/blog.component'
 import Footer from '../../components/footer/footer.component'
 import landingimg from '../../assests/landingimg.jpeg';
+import { Helmet } from 'react-helmet';
+
 class LandingPage extends Component {
   
   constructor(props) {
@@ -26,6 +28,9 @@ class LandingPage extends Component {
     
     return (
       <div>
+        <Helmet>
+          <title>InnovationXY</title>
+        </Helmet>
         <TopNavBar/>
         <img className="landingimg" src={landingimg} width="100%" alt="landingimg"/>
         <Footer />

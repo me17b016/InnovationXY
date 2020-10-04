@@ -5,6 +5,7 @@ import TopNavBar from '../../components/topnavbar/topnavbar.component';
 import Footer from '../../components/footer/footer.component';
 
 import BlogEditor from '../../components/blogeditor/blogeditor.component';
+import { Helmet } from 'react-helmet';
 
 import axios from 'axios';
 
@@ -77,6 +78,9 @@ const HospitalArticles = () => {
 
   return (
     <div>
+      <Helmet>
+          <title>Articles</title>
+        </Helmet>
       <TopNavBar />
       <BlogEditor 
         handleChange={handleChange} 

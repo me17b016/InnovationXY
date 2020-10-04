@@ -10,6 +10,8 @@ import Paper from '@material-ui/core/Paper';
 import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
 
+import { Helmet } from 'react-helmet';
+
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import ScheduleOutlinedIcon from '@material-ui/icons/ScheduleOutlined';
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
@@ -50,7 +52,7 @@ const Hospitals =  props => {
   let history = useHistory()
 
   const [hospitals, setHospitals] = useState([]);
-  const [results, setResults] = useState(10);
+  const [results, setResults] = useState(0);
   const [hospitalSearch, setHospitalSearch] = useState({city: "All", speciality: "Multi Specialist"})
 
   useEffect(() => {
@@ -98,6 +100,9 @@ const Hospitals =  props => {
 
   return (
     <div>
+      <Helmet>
+          <title>Hospitals</title>
+        </Helmet>
       <TopNavBar />
       <div style={{width:600, display:"flex", flexDirection:"row", marginLeft:100}}>
         <div style={{flex : 1}}>

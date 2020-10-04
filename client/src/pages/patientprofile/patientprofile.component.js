@@ -4,6 +4,8 @@ import './patientprofile.styles.css'
 import TopNavBar from '../../components/topnavbar/topnavbar.component'
 import Footer from '../../components/footer/footer.component'
 
+import { Helmet } from 'react-helmet';
+
 import Paper from '@material-ui/core/Paper';
 
 import {
@@ -119,6 +121,9 @@ const PatientProfile = props => {
 
    return (
      <React.Fragment>
+       <Helmet>
+          <title>Patient Profile</title>
+        </Helmet>
        <TopNavBar />
       <div className="patient-profile-box">
         <Paper className="patient-profile-card">
