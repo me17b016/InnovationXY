@@ -159,9 +159,8 @@ const TopNavBar = (props) => {
                   <Paper>
                     <ClickAwayListener onClickAway={handleClose}>
                       <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                        <MenuItem onClick={handleClose}><Link to="/statistics"> Statistics </Link></MenuItem>
                         <MenuItem onClick={handleClose}><Link to="/documentaion"> Documentaion </Link></MenuItem>
-                        <MenuItem onClick={handleClose}><Link to="/support"> Support </Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link to="/aboutus"> About Us</Link></MenuItem>
                       </MenuList>
                     </ClickAwayListener>
                   </Paper>
