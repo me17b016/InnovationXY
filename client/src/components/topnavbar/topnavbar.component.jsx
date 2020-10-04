@@ -137,7 +137,7 @@ const TopNavBar = (props) => {
     <Paper elevation={1} square className="topnavbar-nav"> 
       <div className="topnavbar-box-logo">
         <div className="topnavbar-logo">
-          <Link to="/" >XYInnovation</Link>
+          <Link to="/" >InnovationXY</Link>
         </div>
       </div>
       <div className="topnavbar-box-navigations">

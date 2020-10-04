@@ -28,7 +28,7 @@ router.get('/:id', async (req, res) =>{
       city : "",
       contactno : ""
     };
-    console.log(req.body)
+    //console.log(req.body)
     if (!profile) {
       let user = await User.findById(req.params.id);
       newProfile.hospitalname = user.name;

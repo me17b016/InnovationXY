@@ -29,7 +29,7 @@
 .patient-dashboard-recent-list {
   background-color: white;
   width : 70%;
-  height: 280px;
+  height: 250px;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -56,28 +56,59 @@
   border-radius: 5px 5px 0px 0px;
 }
 
+.patient-dashboard-hospital-search {
+  padding: 15px 30px;
+  color: #536dfe;
+  text-decoration: none;
+  transition: 0.2s;
+  outline: none;
+  background: none;
+  font-weight: 750;
+  border: 1px solid #536dfe ;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  width: 80%;
+  cursor: pointer;
+  margin-left: 10%;
+}
+
+.patient-dashboard-hospital-search:hover {
+  color: #1a237e;
+  background: #536dfe;
+  box-shadow: 0 0 10px #82b1ff, 0 0 40px #82b1ff, 0 0 80px #82b1ff;
+  border: 3px solid #255784 ;
+  border: none;
+  margin-top: 60px;
+  margin-bottom: 11px;
+  transition-delay: 0.01s;
+  cursor: pointer;
+}
+
 /* For Middle */
 
 .patient-feed-box {
   width: 95%;
-  min-height: 600px;
+  /* min-height: 400px; */
   background-color: white;
   margin: 0 auto;
   margin-top: 20px;
-  border: 1px solid black;
+  border: 1px solid #cfd8dc;
   border-radius: 4px;
   font-family: 'Playfair Display', serif;
 }
 
 .patient-feed-organisation {
-  padding: 20px 10px;
+  padding: 5px 10px;
   font-size: 1rem;
   font-weight: 400;
   display: flex;
   flex-direction: row;
 }
 
-
+.patient-feed-content {
+  padding: 15px;
+}
 
 /* For Right */
 .patient-dashboard-news-list {

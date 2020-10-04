@@ -9,7 +9,7 @@ const HospitalOverview = require('../../models/HospitalOverview');
 router.get('/', async(req, res) => {
   try {
     const posts = await Post.find();
-    console.log(posts);
+    // console.log(posts);
     res.status(200).json(posts);
   } catch (err) {
     console.error(err)
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
   try {
     //const user = await User.findOne({user: req.body.id).select('-password');
     const userdata = await HospitalOverview.findOne({user: req.body.id});
-    console.log(userdata);
+    // console.log(userdata);
     let newPost = {
       user : req.body.id,
       profilephoto : userdata.logo,

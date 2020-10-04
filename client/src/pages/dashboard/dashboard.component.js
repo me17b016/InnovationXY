@@ -8,6 +8,52 @@ import Footer from '../../components/footer/footer.component'
 import axios from 'axios';
 import Interweave from 'interweave'
 import ProfilePhoto from '../../assests/news1.jpg'
+import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
+import Checkbox from '@material-ui/core/Checkbox';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
+import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
+import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
+
+const cities = [
+  {
+    value: 'All',
+    label: 'All',
+  },
+  {
+    value: 'Delhi',
+    label: 'Delhi',
+  },
+  {
+    value: 'Agra',
+    label: 'Agra',
+  }
+];
+
+const specilities = [
+  {
+    value: 'Multi Specialist',
+    label: 'Multi Speciality',
+  },
+  {
+    value: 'Orthopedics',
+    label: 'Orthopedics',
+  },
+  {
+    value: 'Ophthalmology',
+    label: 'Ophthalmology',
+  }
+]
+
+const recents = [
+  {recent: "#heart disease"},
+  {recent: "#myopia"},
+  {recent: "#orthopedics"},
+  {recent: "#health"},
+  {recent: "#cancer"},
+  {recent: "#phthalmology"},
+]
 const Dashboard = props => {
   let history = useHistory()
   const [news, setNews] = useState([
@@ -19,6 +65,7 @@ const Dashboard = props => {
   ])
 
   const [topArticles, setTopArticles] = useState([{}])
+  const [hospitalSearch, setHospitalSearch] = useState({city: "All", speciality: "Multi Specialist"})
   const [dummy, setDummy] = useState(0);
   const [feeds, setFeeds] = useState([
     {organisation : "Mehta's group of hospitals", place : "Agra, Delhi", content : ""},
@@ -57,6 +104,17 @@ const Dashboard = props => {
     }
   }, [props])
 
+  const hospitalSearchChange = (name, value) => {
+    let temData = hospitalSearch;
+    temData[name] = value;
+    setHospitalSearch(temData);
+  }
+
+  const onSearchButtonClick = () => {
+    const link = `/hospitals/${hospitalSearch.city}/${hospitalSearch.speciality}`;
+    history.push(link);
+  }
+
   return (
     <Fragment>
       <TopNavBar/>
@@ -65,10 +123,56 @@ const Dashboard = props => {
           <div className="patient-dashboard-recent-list">
             <h3 style={{margin: 0}}>Recent</h3>
             <div style={{marginTop: 10, marginBottom : 30, borderBottom: "1px solid #cfd8dc"}}></div>
+            <div>
+              {
+                recents.map(recent => <div style={{marginBottom:13, marginLeft:12, fontSize:14, color:"#455a64"}}>{recent.recent}</div>)
+              }
+            </div>
           </div>
           <div className="patient-dashboard-searchfordoctor-box">
             <div className="patient-dashboard-searchfordoctor">
               <center>Search for doctors, clinics, hospitals, etc. </center>
+            </div>
+            <div>
+                <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17, marginLeft:"5%", marginTop:20, fontSize:20}}>
+                  City
+                </InputLabel>
+                <TextField 
+                  select
+                  SelectProps={{
+                    native: true,
+                  }}
+                  variant="outlined"
+                  style={{marginTop: 20, height: 5, width : "90%", marginLeft:"5%"}}
+                  size="small"
+                  onChange={e => hospitalSearchChange("city", e.target.value)}
+                >
+                  {cities.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                </TextField>
+                <InputLabel shrink htmlFor="bootstrap-input" style={{marginBottom:-17, marginLeft:"5%", marginTop:40, fontSize:20}}>
+                  Speciality
+                </InputLabel>
+                <TextField 
+                  select
+                  SelectProps={{
+                    native: true,
+                  }}
+                  variant="outlined"
+                  style={{marginTop: 20, height: 5, width : "90%", marginLeft:"5%"}}
+                  size="small"
+                  onChange={e => hospitalSearchChange("speciality", e.target.value)}
+                >
+                {specilities.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                </TextField>
+                <button className="patient-dashboard-hospital-search" onClick={onSearchButtonClick}>SEARCH</button>
             </div>
           </div>
         </div>
@@ -83,8 +187,15 @@ const Dashboard = props => {
                     <div style={{fontSize : "0.7rem"}}>{feed.place} </div>
                   </div>
                 </div>
-                <div style={{marginTop: 0, marginBottom : 15, borderBottom: "1px solid #cfd8dc"}}></div>
+                <div style={{marginTop: 0, marginBottom : 0, borderBottom: "1px solid #cfd8dc"}}></div>
                 <div className="patient-feed-content"><Interweave content={feed.body} /></div>
+                <div style={{marginTop: 0, marginBottom : 0, borderBottom: "1px solid #cfd8dc"}}></div>
+                <div style={{paddingTop: 10,height:40, backgroundColor:"#e1f5fe"}}> 
+                  <Checkbox icon={<ThumbUpIcon />} checkedIcon={<ThumbUpIcon />} name="checkedH" style={{marginTop:-15, marginLeft:20, fontSize:20}} />
+                  <ChatOutlinedIcon style={{marginLeft:50}}/>
+                  <ShareOutlinedIcon style={{marginLeft:50}}/>
+                  <MoreVertOutlinedIcon style={{marginRight:15, float:"right"}} />
+                </div>
               </div>
             ))
           }
