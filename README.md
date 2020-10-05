@@ -7,15 +7,17 @@
 # Clone the repository and install all the dependencies
   Open the terminal
   
-  Run `npm start` in project folder directory
+  Run `npm start` in project directory
   
-  then, go to "client" folder, run "npm install"
+  then, go to `client` directory, run `npm install`
   
 # Start the server
-  In the terminal, root project folder
+  In the terminal, project directory
   
-  run "npm dev start"
+  run `npm dev start`
   
   you must be see localhost:3000 is running for frontend
   
-  and localhost:4000 is running for backend and get message "Connected to Database" in your terminal
+  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
+  and localhost:4000 is running for backend and get message "Connected to Database..." in your terminal
