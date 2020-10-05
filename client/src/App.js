@@ -16,6 +16,7 @@ import HospitalPosts from './pages/hospitalposts/hospitalposts.component';
 import HospitalArticles from './pages/hospitalarticles/hospitalarticles.component';
 
 import About from './pages/about/about.component';
+import Documentation from './pages/documentation/documentation.component'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -32,6 +33,7 @@ const App = () => (
         <Route exact path="/hospitalposts" component={HospitalPosts} />
         <Route exact path="/hospitalarticles" component={HospitalArticles} />
         <Route exact path="/aboutus" component={About} />
+        <Route exact path="/documentation" component={Documentation} />
       </Switch>
     </Router>
   );

@@ -44,7 +44,7 @@ const About = props => {
                 <img height={300} width={290} src={prateekimg} alt="Prateek Singh"/>
                 <p style={{marginTop:5, fontSize:20}}>PRATEEK SINGH</p>
                 <p style={{marginTop:-15, fontSize:18}}>IIT (ISM), DHANBAD</p>
-                <p style={{marginTop:-15, color:"#546e7a"}}>Android development, Quality Assurance, Data Architecture</p>
+                <p style={{marginTop:-15, color:"#546e7a"}}>Android development, Data Analytics, Machine Learning, Quality Assurance</p>
                 {/* <p style={{marginTop:-15, color:"#546e7a"}}>Android development</p> */}
               </center>
             </div>
