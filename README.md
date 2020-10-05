@@ -7,7 +7,7 @@
 # Clone the repository and install all the dependencies
   Open the terminal
   
-  Run "npm install" in project folder directory
+  Run `npm start` in project folder directory
   
   then, go to "client" folder, run "npm install"
   
